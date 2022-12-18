@@ -1,12 +1,11 @@
 <template>
   <div class="hello">
-    <h3>Study Vue</h3>
-    <p>{{ message}}</p>
-    <div>{{ rawHtml}}</div>
-    <div v-html="rawHtml"></div>
-    <div :id="dynamicId"></div>
-    <p> {{ num+100 }}</p>
-    <p> {{flag ? "美眉":"抠脚汉"}}</p>
+   <h3>列表渲染</h3>
+   <ul>
+    <li v-for="item in newsList" :key="item.id">
+      {{ item.title }}
+    </li>
+   </ul>
   </div>
 </template>
 
@@ -15,11 +14,24 @@ export default {
   name: 'HelloWorld',
   data(){
     return {
-      message: "Day Day up",
-      rawHtml: "<a href='https://www.baidu.com'>Baidu</a>",
-      dynamicId: 8888,
-      num: 100,
-      flag: false
+      newsList:[
+        {
+          id:1001,
+          title:"news daily 1"
+        },
+        {
+          id:1002,
+          title:"news daily 2"
+        },
+        {
+          id:1003,
+          title:"news daily 3"
+        },
+        {
+          id:1004,
+          title:"news daily 4"
+        }
+      ]
     }
   }
 }
