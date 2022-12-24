@@ -13,6 +13,11 @@ const api = {
             password:"iwen123",
             verification_code: "crfvw"
         })
+    },
+    chatBot(msg){
+        return axios.post(path.chatUrl,{
+            message:msg
+        })
     }
     
 }
