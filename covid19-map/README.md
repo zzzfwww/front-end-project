@@ -1,4 +1,4 @@
-# novid-19
+# covid-19
 
 This template should help get you started developing with Vue 3 in Vite.
 
@@ -38,31 +38,10 @@ npm run dev
 ```sh
 npm run build
 ```
-### api
 
-地区 name  
-新增确诊 today.confirm
-累计确诊 total.confirm
-治愈 total.heal
-死亡 total.dead
+## 数据准备
+* 网易疫情[数据](https://wp.m.163.com/163/page/news/virus_report/index.html)
 
-### 总数据
-
-1. 本土现有确诊
- 较上日 chindAdd.localConfirmH5
- store.chinaTotal.localConfirm
-2. 现有确诊
- 较上日 chindAdd.nowConfirm
- chinaTotal.nowConfirm
-3. 累计确诊
- 较上日 chindAdd.confirm
- chinaTotal.confirm
-4. 无症状感染者
-  较上日chindAdd.noInfect
-  chinaTotal.noInfect
-5. 境外输入
-  较上日 chindAdd.importedCase
-   chinaTotal.importedCase
-6. 累计死亡
-  较上日 chindAdd.dead
-  chinaTotal.dead
+### 服务端准备
+* 使用gin提供http[服务](https://github.com/zzzfwww/daydayup/tree/master/22-12-31-covid-19-data)
+* 数据直接导入程序，目的是保持数据稳定，便于前端页面调试
